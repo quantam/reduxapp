@@ -1,16 +1,74 @@
+html {
+  font-family: 'Lora', sans-serif;
+  width: 100%;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: grey;
-  text-align: center;
+  margin: 5% auto 0 auto;
+  width: 90%;
+  max-width: 1125px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-input {
-  width: 200px;
+input,
+span,
+label,
+textarea {
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  font-size: 22px;
+}
+
+.btn {
+  -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  display: block;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #eee;
+}
+
+.btn:active {
+  background: #999;
+}
+
+h2 {
+  color: white;
+  background: black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  border: 1px solid gray;
+  background: #40c040;
+}
+
+.danger {
+  background: rgba(255, 0, 0, 0.76);
+  color: white;
+}
+
+.success {
+  background: #40c040;
+  color: white;
 }
