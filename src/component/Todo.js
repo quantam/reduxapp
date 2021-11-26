@@ -17,13 +17,6 @@ function Todo() {
             +
           </button>
         </div>
-
-        <div className="display-item">
-          <ul>
-            <li>Test</li>
-            <li>Test</li>
-          </ul>
-        </div>
       </div>
     </div>
   );
