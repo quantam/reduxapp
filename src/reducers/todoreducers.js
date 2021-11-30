@@ -5,10 +5,10 @@ const initialState = {
 const todoreducers = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      const { id, data } = action.payload; // object destructing es6 feature
+      const { id, data } = action.payload; // object destructing es6 feature {id: 123, data: 'name'}
       return {
         ...state,
-        data: [
+        list: [
           ...state.list,
           {
             id: id,
@@ -16,21 +16,15 @@ const todoreducers = (state = initialState, action) => {
           },
         ],
       };
+    case 'DELETE_TODO':
+      const filterData = state.list.filter((item) => item.id !== action.id);
+      return {
+        ...state,
+        list: filterData,
+      };
+    default:
+      return state;
   }
-  return state;
 };
 
 export default todoreducers;
-
-//state
-
-// state: [
-//     list: [
-//         {id: 63473547, data: '1st todo'},
-//         {id: 63473547, data: '1st todo'}
-//         {id: 63473547, data: '1st todo'}
-//   ];
-// ]
-
-// {id: 63473547, data: '1st todo'}
-// state.list.push(inputdata);
