@@ -8,6 +8,16 @@ export const addTodo = (data) => {
   };
 };
 
+export const updateTodo = (id, data) => {
+  return {
+    type: 'UPDATE_TODO',
+    payload: {
+      id: id,
+      data: data,
+    },
+  };
+};
+
 export const deleteTodo = (id) => {
   return {
     type: 'DELETE_TODO',

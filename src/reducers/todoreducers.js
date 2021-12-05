@@ -22,6 +22,25 @@ const todoreducers = (state = initialState, action) => {
         ...state,
         list: filterData,
       };
+
+    case 'UPDATE_TODO':
+      const modifiedData = state.list.map((item) => {
+        if (item.id === action.payload.id) {
+          item.data = action.payload.data;
+        }
+        return { id: item.id, data: item.data };
+      });
+
+      return {
+        ...state,
+        list: modifiedData,
+      };
+
+    case 'DELETE_ALL_TODO':
+      return {
+        ...state,
+        list: [],
+      };
     default:
       return state;
   }
